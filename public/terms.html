@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disaster Management Volunteer Agreement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .header, .content {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            text-align: center;
+        }
+
+        .content ul {
+            list-style-position: inside;
+        }
+        
+        button {
+            background: green;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        button:hover {
+            background: #2575fc;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+            .content p, .content ul {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Terms and Conditions for Volunteers</h1>
+        </div>
+        <div class="content">
+            <p>Volunteers play a vital role in disaster management, providing essential support to save lives, offer relief, and rebuild communities. Here’s how you can contribute:</p>
+            <ul>
+                <li>Search and rescue: Help locate and rescue individuals in hazardous situations.</li>
+                <li>First aid: Offer basic medical care to the injured.</li>
+                <li>Debris removal: Clear debris to make areas safe for use.</li>
+                <li>Disaster relief: Distribute essential supplies like food, water, and clothing.</li>
+                <li>Sheltering: Assist in setting up and managing temporary shelters.</li>
+                <li>Public health: Support public health efforts through hygiene kits and education.</li>
+                <li>Mental health: Provide emotional support and counseling.</li>
+                <li>Additional support: Transportation, public communication, documentation, and supporting professional responders.</li>
+            </ul>
+            <p>By using a disaster management app, your efforts can be directed where they are most needed, making your volunteer work more effective and efficient.</p>
+        </div>
+        <!-- <div class="buttons">
+            <button onclick="setrole('volunteer');">I Agree</button>
+            <button onclick="setrole('user');">Cancel</button>
+        </div>
+    </div>
+    <script>
+        function setrole(role){
+            // Implementation needed to connect this function with your form submission or application logic
+            console.log(role); // Placeholder for actual implementation
+        }
+    </script> -->
+    <div class="buttons">
+        <form method="post" action="/home1"><button  class="bt1" value="I Agree" onclick="setrole('volunteer'); ">I Agree</button>
+            <input type="text" id="volunteerID" name="role" hidden>
+         <button   class="bt2" value="I Agree" onclick="setrole('user'); ";>Cancel</button></form>
+     </div>
+</body>
+<script>
+    function setrole(role){
+        document.getElementById('volunteerID').value = role;
+    }
+</script>
+
+</body>
+</html>
